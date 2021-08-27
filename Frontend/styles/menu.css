@@ -14,6 +14,100 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+/*nav bar design */
+nav {
+  background: #ededed;
+  position: fixed;
+  z-index: 100;
+  color: #000;
+  height: 80px;
+  width: 100%;
+}
+
+label.logo {
+  line-height: 80px;
+  padding: 0px 30px;
+}
+
+.header-logo {
+  margin-top: 18px;
+  width: 180px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: #000;
+  font-size: 17px;
+}
+
+a.active,
+a:hover {
+  color: #da0037;
+  transition: 0.5s;
+}
+
+.check-btn {
+  font-size: 30px;
+  color: #000;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media screen and (max-width: 858px) {
+  .check-btn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #f9f9f9;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    color: #161616;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header-logo {
+    margin-top: 22px;
+    width: 50px;
+  }
+}
+
 /*menu page banner design */
 .banner {
   background: url(/Frontend/assets/menu-banner.jpg) no-repeat;

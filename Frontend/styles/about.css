@@ -14,6 +14,100 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+/*nav bar design */
+nav {
+  background: #ededed;
+  position: fixed;
+  z-index: 100;
+  color: #000;
+  height: 80px;
+  width: 100%;
+}
+
+label.logo {
+  line-height: 80px;
+  padding: 0px 30px;
+}
+
+.header-logo {
+  margin-top: 18px;
+  width: 180px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: #000;
+  font-size: 17px;
+}
+
+a.active,
+a:hover {
+  color: #da0037;
+  transition: 0.5s;
+}
+
+.check-btn {
+  font-size: 30px;
+  color: #000;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media screen and (max-width: 858px) {
+  .check-btn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #f9f9f9;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    color: #161616;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header-logo {
+    margin-top: 22px;
+    width: 50px;
+  }
+}
+
 /*about-content*/
 .about-wrapper {
   display: flex;
@@ -44,61 +138,82 @@ body {
 }
 
 .about-img {
-  height: calc(80vh - 80px);
+  height: calc(70vh - 70px);
+  margin-top: 3rem;
 }
 
-@media screen and (min-width: 1000px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .about-wrapper {
     flex-direction: column;
     height: 80vh;
   }
   .about-left {
     text-align: center;
+    margin-top: 15rem;
   }
   .about-left div {
     padding-left: 50px;
     padding-right: 50px;
   }
+  .about-right {
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+  }
+  .about-img {
+    height: calc(30vh - 30px);
+  }
   .about-left h2 {
-    font-size: 5rem;
+    font-size: 2.5rem;
   }
   .about-left p {
-    font-size: 2rem;
-  }
-  .about-right {
-    display: none;
+    font-size: 1.5rem;
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768px) {
   .about-wrapper {
     flex-direction: column;
     height: 80vh;
   }
   .about-left {
     text-align: center;
+    margin-top: 10rem;
   }
   .about-left div {
     padding-left: 20px;
     padding-right: 20px;
   }
+  .about-right {
+    margin-top: 0.5rem;
+    margin-bottom: 10rem;
+  }
+  .about-img {
+    height: calc(30vh - 30px);
+  }
   .about-left h2 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .about-left p {
-    font-size: 1.5rem;
-  }
-  .about-right {
-    display: none;
+    font-size: 1.3rem;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) { 
+  .about-wrapper {
+    flex-direction: column;
+    height: 80vh;
+  }
+  .about-left { 
+    margin-top: 3rem;
+  } 
   .about-left h2 {
     font-size: 1.5rem;
   }
   .about-left p {
-    font-size: 1rem;
+    font-size: 1rem;   
+  }
+  .about-right {
+    display: none;   
   }
 }
 

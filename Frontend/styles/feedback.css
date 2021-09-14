@@ -109,37 +109,44 @@ a:hover {
 }
 
 section {
-  height: calc(30vh - 30px);
+  height: calc(10vh - 15px);
 }
 
-/*contact from*/
-input[type="text"], input[type=password]{
+/*form-section*/
+.form-section {
+  margin: 5% 20% 5% 20%;
+}
+
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #000;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  margin-top: 6px;
-  margin-bottom: 5px;
-  resize: vertical;
-  margin-top: 15px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
 }
 
-input.invalid {
-  border: 1px solid red;
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  background-color: #ddd;
+  outline: none;
 }
 
-.error {
-  color: red;
-  font-size: 13px;
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
 }
 
-.hidden {
-  display: none;
-}
-
-input[type="submit"] {
-  background-color: #DA0037;
+.feedbackbtn {
+  background-color: #da0037;
   color: white;
   padding: 8px 18px 8px 18px;
   border: none;
@@ -152,41 +159,11 @@ input[type="submit"] {
   display: block;
   margin-top: 12px;
   margin-bottom: 12px;
-
 }
 
-input[type="submit"]:hover {
-  background-color: #DA0037;
-}
-
-.form-container {
-  border: 1px solid #000;
-  border-radius: 25px;
-  padding: 20px; 
-  margin: 2% 35% 10% 35%;  
-}
-
-.register{
-  color: #da0037;
-}
-
-.msg {
-  text-align: center;
-  font-size: 2rem;
-}
-
-@media screen and (max-width: 1024px) {
-  section {
-    height: calc(25vh - 30px);
-  }
-  .form-container {  
-    margin: 5%  25% 45% 25%;
-  }
-}
-
-@media screen and (max-width: 600px) { 
-  .form-container {  
-    margin: 5%  10% 45% 10%;
+@media screen and (max-width: 600px) {
+  .form-section {
+    margin: 5% 10% 5% 10%;
   }
 }
 

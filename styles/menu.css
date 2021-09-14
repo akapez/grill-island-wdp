@@ -110,7 +110,7 @@ a:hover {
 
 /*menu page banner design */
 .banner {
-  background: url(/Frontend/assets/menu-banner.jpg) no-repeat;
+  background: url(/assets/menu-banner.jpg) no-repeat;
   background-size: cover;
   height: calc(80vh - 80px);
 }

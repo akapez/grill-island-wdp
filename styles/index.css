@@ -110,7 +110,7 @@ a:hover {
 
 /*cover design */
 .cover {
-  background:url(/Frontend/assets/landing.jpg) no-repeat center;
+    background: url(/assets/landing.jpg) no-repeat;
     background-size: cover;
     height: 450px;
     width: 100%;
@@ -124,19 +124,56 @@ a:hover {
 .intro-wrapper{
   display: flex;
   padding-top: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 
 .intro {
   padding-left: 0;
 }
 
-.intro-frame {
-  display: inline-flex;
+.intro-img{
+  height: 100%;
   width: 100%;
+
 }
 
-.intro-frame img {
-  height: 50vh;
+/*food intro*/
+.food-intro-h{
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/*popular foodies*/
+
+.popular-foodies{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.popular-foodie{
+  display: flex;
+  flex-direction: row;
+  padding: 5rem calc((100vw - 1300px) / 2);
+}
+
+.popular-foodie2{
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 5rem calc((100vw - 1300px) / 2);
+}
+
+.pfood-txt2{
+  text-align: right;
+}
+
+.resize{
+  height: 500px;
+  width: 500px;
+  object-fit: cover;
 }
 
 

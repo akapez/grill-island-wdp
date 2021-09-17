@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/*nav bar design */
+nav {
+  background: #ededed;
+  position: fixed;
+  z-index: 100;
+  color: #000;
+  height: 80px;
+  width: 100%;
+}
+
+label.logo {
+  line-height: 80px;
+  padding: 0px 30px;
+}
+
+.header-logo {
+  margin-top: 18px;
+  width: 180px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: #000;
+  font-size: 17px;
+}
+
+a.active,
+a:hover {
+  color: #da0037;
+  transition: 0.5s;
+}
+
+.check-btn {
+  font-size: 30px;
+  color: #000;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media screen and (max-width: 858px) {
+  .check-btn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #f9f9f9;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    color: #161616;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header-logo {
+    margin-top: 22px;
+    width: 50px;
+  }
+}
+
+section {
+  height: calc(10vh - 15px);
+}
+
+/*form-section*/
+.form-section {
+  margin: 5% 20% 3% 20%;
+}
+
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.updatebtn {
+  background-color: #da0037;
+  color: white;
+  padding: 8px 18px 8px 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+@media screen and (max-width: 600px) {
+  .form-section {
+    margin: 5% 10% 5% 10%;
+  }
+}
+
+/*order table*/
+.orders-section {
+  margin: 0 10% 5% 10%;
+}
+
+#orders {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#orders td,
+#orders th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#orders tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#orders tr:hover {
+  background-color: #ddd;
+}
+
+#orders th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+
+/*footer*/
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  background-color: #ededed;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-logo {
+  width: 180px;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.social-icons {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  text-align: right;
+}
+
+.caption {
+  text-align: right;
+}
+
+.group {
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1024px) {
+  .left {
+    height: 20vh;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    flex-direction: column;
+    height: 50vh;
+  }
+
+  .left {
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: 200px;
+    margin-right: auto;
+  }
+
+  .social-icons {
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .caption {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    height: 35vh;
+  }
+
+  .footer-logo {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    height: 45vh;
+  }
+
+  .left {
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: 45%;
+  }
+}

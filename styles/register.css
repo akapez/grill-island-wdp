@@ -1,139 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
-
-* {
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-}
-
-/*nav bar design */
-nav {
-  background: #ededed;
-  position: fixed;
-  z-index: 100;
-  color: #000;
-  height: 80px;
-  width: 100%;
-}
-
-label.logo {
-  line-height: 80px;
-  padding: 0px 30px;
-}
-
-.header-logo {
-  margin-top: 18px;
-  width: 180px;
-}
-
-nav ul {
-  float: right;
-  margin-right: 20px;
-}
-
-nav ul li {
-  display: inline-block;
-  line-height: 80px;
-  margin: 0 5px;
-}
-
-nav ul li a {
-  color: #000;
-  font-size: 17px;
-}
-
-.check-btn {
-  font-size: 30px;
-  color: #000;
-  float: right;
-  line-height: 80px;
-  margin-right: 40px;
-  cursor: pointer;
-  display: none;
-}
-
-#check {
-  display: none;
-}
-
-@media screen and (max-width: 858px) {
-  .check-btn {
-    display: block;
-  }
-
-  ul {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #f9f9f9;
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all 0.5s;
-  }
-
-  nav ul li {
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
-  }
-
-  nav ul li a {
-    color: #161616;
-  }
-
-  #check:checked ~ ul {
-    left: 0;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .header-logo {
-    margin-top: 22px;
-    width: 50px;
-  }
-}
-
-section {
+.register-banner {
   height: calc(30vh - 30px);
 }
 
+.register-form {
+  border: 1px solid #000;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 2% 35% 10% 35%;
+}
+
 /*contact from*/
-input[type="text"],
+.register-form input[type="text"],
 input[type="password"] {
   width: 100%;
   padding: 12px;
-  border: 1px solid #000;
+  border: none;
+  background: #f1f1f1;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   margin-top: 6px;
   margin-bottom: 5px;
   resize: vertical;
-  margin-top: 15px;
 }
 
-input.invalid {
-  border: 1px solid red;
-}
-
-.error {
-  color: red;
-  font-size: 13px;
-}
-
-.hidden {
-  display: none;
-}
-
-input[type="submit"] {
+.register-form button {
   background-color: #da0037;
   color: white;
   padding: 8px 18px 8px 18px;
@@ -150,140 +40,25 @@ input[type="submit"] {
   margin-bottom: 12px;
 }
 
-input[type="submit"]:hover {
+.register-form button:hover {
   background-color: #da0037;
-}
-
-.form-container {
-  border: 1px solid #000;
-  border-radius: 25px;
-  padding: 20px;
-  margin: 2% 35% 10% 35%;
 }
 
 .register {
   color: #da0037;
 }
 
-.msg {
-  text-align: center;
-  font-size: 2rem;
-}
-
 @media screen and (max-width: 1024px) {
-  section {
+  .register-banner {
     height: calc(25vh - 30px);
   }
-  .form-container {
+  .register-form {
     margin: 5% 25% 35% 25%;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .form-container {
+  .register-form {
     margin: 5% 10% 45% 10%;
-  }
-}
-
-/*footer*/
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-  background-color: #ededed;
-}
-
-.left {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  height: 40vh;
-}
-
-.right {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.footer-logo {
-  width: 180px;
-  display: block;
-  margin-left: auto;
-  margin-right: 0;
-}
-
-.social-icons {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  cursor: pointer;
-  text-align: right;
-}
-
-.caption {
-  text-align: right;
-}
-
-.group {
-  font-weight: 700;
-}
-
-@media screen and (min-width: 1000px) and (max-width: 1024px) {
-  .left {
-    height: 20vh;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .wrapper {
-    flex-direction: column;
-    height: 50vh;
-  }
-
-  .left {
-    text-align: center;
-  }
-
-  .footer-logo {
-    width: 200px;
-    margin-right: auto;
-  }
-
-  .social-icons {
-    cursor: pointer;
-    text-align: center;
-  }
-
-  .caption {
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .wrapper {
-    height: 35vh;
-  }
-
-  .footer-logo {
-    width: 30%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .wrapper {
-    height: 45vh;
-  }
-
-  .left {
-    text-align: center;
-  }
-
-  .footer-logo {
-    width: 45%;
   }
 }

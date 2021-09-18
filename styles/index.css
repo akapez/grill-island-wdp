@@ -49,6 +49,10 @@
   /* padding: 5rem calc((100vw - 1300px) / 2); */
 }
 
+.info-panel{
+  padding-right: 5%;
+}
+
 .menu-btn{
   background-color: #da0037;
   color: white;
@@ -94,6 +98,10 @@
     flex-direction: column;
     text-align: center;
     margin-bottom: 5%;
+  }
+
+  .info-panel{
+    padding-right: 0;
   }
 
   .menu-btn{  

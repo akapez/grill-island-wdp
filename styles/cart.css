@@ -59,8 +59,8 @@ td{
   padding: 10px 5px;
 }
 
-td input{
-  width: 40px;
+td .qty_input{
+  width: 50px;
   height: 30px;
   padding: 5px;
 }
@@ -118,6 +118,7 @@ span.price {
 @media (max-width: 800px) {
   .row {
     flex-direction: column-reverse;
+    padding: 0 5% 10% 5%;
   }
   .col-25 {
     margin-bottom: 20px;

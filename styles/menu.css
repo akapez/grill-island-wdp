@@ -20,7 +20,7 @@
   margin-bottom: 70px;
 }
 
-.search_container input[type="text"] {
+.search_input {
   padding: 6px;
   margin-top: 8px;
   font-size: 17px;
@@ -29,7 +29,7 @@
   width: 350px;
 }
 
-.search_container button {
+.search_button {
   background-color: #da0037;
   color: white;
   padding: 8px 18px 8px 18px;
@@ -75,7 +75,7 @@
   width: 100%;
 }
 
-.menu_container .menu button {
+.order_button {
   background-color: #da0037;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;

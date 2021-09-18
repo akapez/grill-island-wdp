@@ -25,24 +25,9 @@
               </div>
             </div>
           </td>
-          <td><input type="number" value="1"></td>
+          <td><input class="qty_input" type="number" value="1"></td>
           <td>Rs. 1000.00</td>
-        </tr>
-        <tr>
-          <td>
-            <div class="cart_info">
-              <img src="./assets/pizza.png" alt="food-item">
-              <div>
-                <h4>Pizza</h4>
-                <small>Rs. 1000.00</small>
-                <br>
-                <a href="">Remove</a>
-              </div>
-            </div>
-          </td>
-          <td><input type="number" value="1"></td>
-          <td>Rs. 1000.00</td>
-        </tr>
+        </tr>       
       </table>
     </div>
 

@@ -2,17 +2,15 @@
   height: calc(30vh - 30px);
 }
 
-.login-form{
+.login_form{
   border: 1px solid #000;
   border-radius: 25px;
   padding: 20px; 
   margin: 2% 35% 10% 35%;  
 }
 
-.login-form 
-input[type="text"],
-input[type="password"]
-{ background: #f1f1f1;
+.login_input { 
+  background: #f1f1f1;
   width: 100%;
   padding: 12px;
   border: none;
@@ -24,7 +22,7 @@ input[type="password"]
   margin-top: 15px;
 }
 
-.login-form button  {
+.login_button {
   background-color: #DA0037;
   color: white;
   padding: 8px 18px 8px 18px;
@@ -41,7 +39,7 @@ input[type="password"]
 
 }
 
-.login-form button :hover {
+.login_button :hover {
   background-color: #DA0037;
 }
 
@@ -58,13 +56,13 @@ input[type="password"]
   .login-banner {
     height: calc(25vh - 30px);
   }
-  .login-form{  
+  .login_form{  
     margin: 5%  25% 45% 25%;
   }
 }
 
 @media screen and (max-width: 600px) { 
-  .login-form{  
+  .login_form{  
     margin: 5%  10% 45% 10%;
   }
 }

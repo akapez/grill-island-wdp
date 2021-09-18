@@ -28,7 +28,7 @@
     <!--Popular Foodies-->
     <div class="popular-foodies">
       <div class="popular-foodie">
-        <div>
+        <div class="info-panel">
           <h1>PIZZA</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, magnam dolorem vero explicabo sint expedita. Dolores neque eum officia quisquam, dignissimos similique sint quae laborum consequatur repellendus, consequuntur, recusandae minus!</p>
           <a href="menu.php"><button type="button" class="menu-btn">VIEW MENU</button></a>
@@ -38,7 +38,7 @@
         </div>
       </div>
       <div class="popular-foodie">
-        <div>
+        <div class="info-panel">
           <h1>BURGERS</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, magnam dolorem vero explicabo sint expedita. Dolores neque eum officia quisquam, dignissimos similique sint quae laborum consequatur repellendus, consequuntur, recusandae minus!</p>
           <a href="menu.php"><button type="button" class="menu-btn">VIEW MENU</button></a>
@@ -48,7 +48,7 @@
         </div>
       </div>
       <div class="popular-foodie">
-        <div>
+        <div class="info-panel">
           <h1>SUBMARIENS</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, magnam dolorem vero explicabo sint expedita. Dolores neque eum officia quisquam, dignissimos similique sint quae laborum consequatur repellendus, consequuntur, recusandae minus!</p>
           <a href="menu.php"><button type="button" class="menu-btn">VIEW MENU</button></a>

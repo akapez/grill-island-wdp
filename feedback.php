@@ -15,13 +15,13 @@
       <input type="radio" id="bad" name="experience" value="bad" />
       <label for="bad">Bad</label><br /><br />
 
-      <input type="text" placeholder="Full Name" name="fullname" id="fullname" required />
+      <input class="fb_input" type="text" placeholder="Full Name" name="fullname" id="fullname" required />
 
-      <input type="text" placeholder="Email" name="email" id="email" required />
+      <input class="fb_input" type="text" placeholder="Email" name="email" id="email" required />
 
-      <input type="number" placeholder="Age" name="age" id="age" required />
+      <input class="fb_input" type="number" placeholder="Age" name="age" id="age" required />
 
-      <input type="number" placeholder="Phone Number" id="phone" name="phone" required />
+      <input class="fb_input" type="number" placeholder="Phone Number" id="phone" name="phone" required />
 
       <label for="age">Select Gender</label><br />
       <input type="radio" id="male" name="gender" value="Male" />
@@ -29,7 +29,7 @@
       <input type="radio" id="female" name="gender" value="Female" />
       <label for="female">Female</label><br /><br />
 
-      <textarea rows="6" placeholder="Message" name="message" id="message" required></textarea>
+      <textarea class="fb_input" rows="6" placeholder="Message" name="message" id="message" required></textarea>
 
       <button id="submit" type="submit" name="submit" class="feedbackbtn">
         SUBMIT

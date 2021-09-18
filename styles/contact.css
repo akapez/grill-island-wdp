@@ -1,0 +1,462 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/*nav bar design */
+nav {
+  background: #ededed;
+  position: fixed;
+  z-index: 100;
+  color: #000;
+  height: 80px;
+  width: 100%;
+}
+
+label.logo {
+  line-height: 80px;
+  padding: 0px 30px;
+}
+
+.header-logo {
+  margin-top: 18px;
+  width: 180px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: #000;
+  font-size: 17px;
+}
+
+a.active,
+a:hover {
+  color: #da0037;
+  transition: 0.5s;
+}
+
+.check-btn {
+  font-size: 30px;
+  color: #000;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media screen and (max-width: 858px) {
+  .check-btn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #f9f9f9;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    color: #161616;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header-logo {
+    margin-top: 22px;
+    width: 50px;
+  }
+}
+
+/* Contact Section */
+
+.contacts{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.1)), url(../assets/louis-hansel-8qT_cml7M68-unsplash.jpg);
+  background-size: cover;
+}
+
+section::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.container{
+  position: relative;
+  min-width: 1100px;
+  min-height: 550px;
+  display: flex;
+  z-index: 1000;
+}
+
+.container .contactInfo{
+  position: absolute;
+  top: 40px;
+  width: 350px;
+  height: calc(100% - 80px);
+  background: transparent;
+  z-index: 1;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 25px rgba(31, 31, 31, 0.15);
+}
+
+
+.container .contactInfo h2{
+  color: #da0037;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.container .contactInfo ul.info{
+  color: white;
+  position: relative;
+  margin: 20px 0;
+}
+
+.container .contactInfo ul.info li{
+  position: relative;
+  list-style: none;
+  display: flex;
+  margin: 20px 0;
+  cursor: pointer;
+  align-items: flex-start;
+}
+
+.container .contactInfo ul.info li span:nth-child(1){
+  width: 30px;
+  min-width: 30px;
+}
+
+.container .contactInfo ul.info li span:nth-child(1) i{
+  max-width: 100%;
+}
+
+.container .contactInfo ul.info li span:nth-child(2){
+  margin-left: 10px;
+  font-weight: 300;
+}
+
+.container .contactForm{
+  position: absolute;
+  padding: 70px 50px;
+  padding-left: 250px;
+  margin-left: 150px;
+  width: calc(100% - 150px);
+  height: 100%;
+  background: transparent;
+  box-shadow: 0 50px 50px rgba(41, 40, 40, 0.25);
+}
+
+.container .contactForm h2{
+  font-size: 24px;
+  font-weight: 500;
+  color: #da0037;
+}
+
+.container .contactForm .msgBox{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.container .contactForm .msgBox .inputBox{
+  position: relative;
+  margin-bottom: 35px;
+  color: white;
+}
+
+.container .contactForm .msgBox .inputBox.w50{
+  width: 47%;
+}
+
+.container .contactForm .msgBox .inputBox.w100{
+  width: 100%;
+}
+
+.container .contactForm .msgBox .inputBox input,
+.container .contactForm .msgBox .inputBox textarea{
+  width: 100%;
+  resize: none;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 300;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid;
+  background-color: transparent;
+  color: white;
+}
+
+.container .contactForm .msgBox .inputBox textarea{
+  height: 120px;
+}
+
+.container .contactForm .msgBox .inputBox span{
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  pointer-events: none;
+  font-size: 18px;
+  font-weight: 300;
+  transition: 0.3s;
+}
+
+.container .contactForm .msgBox .inputBox input:focus ~ span,
+.container .contactForm .msgBox .inputBox input:valid ~ span,
+.container .contactForm .msgBox .inputBox textarea:focus ~ span,
+.container .contactForm .msgBox .inputBox textarea:valid ~ span{
+  transform: translateY(-20px);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.container .contactForm .msgBox .inputBox input[type="submit"]{
+  padding: 1rem 3rem;
+  border: none;
+  background: #da0037;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s ease;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+@media screen and (max-width : 1200px){
+  .container{
+      width: 90%;
+      min-width: auto;
+      margin: 20px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  }
+
+  .container .contactInfo{
+      top: 0;
+      height: 550px;
+      position: relative;
+      box-shadow: none;
+  }
+
+  .container .contactForm{
+      position: relative;
+      width: calc(100% - 350px);
+      padding-left: 0;
+      margin-left: 0;
+      padding: 40px;
+      height: 550px;
+      box-shadow: none;
+  }
+}
+
+@media screen and (max-width : 991px) {
+  section::before{
+      display: none;
+  }
+
+  .container{
+      display: flex;
+      flex-direction: column-reverse;
+  }
+
+  .container .contactForm{
+      width: 100%;
+      height: auto;
+
+  }
+
+  .container .contactInfo{
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .container .contactInfo ul.social{
+      position: relative;
+      display: flex;
+  }
+}
+
+@media screen and (max-width : 600px) {
+  .container .contactForm{
+      padding: 25px;
+  }
+
+  .container .contactForm{
+      padding: 25px;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .container .contactInfo ul.social{
+      margin-top: 40px;
+  }
+
+  .container .contactForm .msgBox .inputBox.w50{
+      width: 100%;
+  }
+}
+
+/*footer*/
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  background-color: #ededed;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-logo {
+  width: 180px;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.social-icons {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  text-align: right;
+}
+
+.caption {
+  text-align: right;
+}
+
+.group {
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1024px) {
+  .left {
+    height: 20vh;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    flex-direction: column;
+    height: 50vh;
+  }
+
+  .left {
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: 200px;
+    margin-right: auto;
+  }
+
+  .social-icons {
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .caption {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    height: 35vh;
+  }
+
+  .footer-logo {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    height: 45vh;
+  }
+
+  .left {
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: 45%;
+  }
+}

@@ -6,7 +6,7 @@
 <div class="login_form">
   <h3>LOG IN</h3>
   <form action="" autocomplete="off">
-    <input  class="login_input" type="text" name="email" placeholder="E-mail">   
+    <input  class="login_input" type="email" name="email" placeholder="E-mail">   
     <input  class="login_input" type="password" name="password" placeholder="Password">  
     <button class="login_button" type="submit">Login</button>
   </form>

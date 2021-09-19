@@ -9,7 +9,7 @@
     <!--header and footer css-->
     <link rel="stylesheet" href="./styles/styles.css" />
     <!--index css-->
-    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
     <!--menu css-->    
     <link rel="stylesheet" href="./styles/menu.css" />
     <!--cart css-->    
@@ -20,11 +20,9 @@
     <link rel="stylesheet" href="./styles/about.css" />
     <!--contact css-->    
     <link rel="stylesheet" href="./styles/contact.css" />
-    <!--login css-->    
-    <link rel="stylesheet" href="./styles/login.css" />
-    <!--register css-->    
-    <link rel="stylesheet" href="./styles/register.css" />
-    <!--register css-->    
+    <!--login and register css-->    
+    <link rel="stylesheet" href="./styles/index.css" /> 
+    <!--profile css-->    
     <link rel="stylesheet" href="./styles/profile.css" />
    
    
@@ -40,16 +38,28 @@
         <i class="fas fa-bars"></i>
       </label>
       <label class="logo">
-        <a href="index.php" class="navbar__logo">
+        <a href="home.php" class="navbar__logo">
           <img class="header-logo" src="./assets/logo.png" alt="company-logo">
       </a>
         </label>
-      <ul>
+      <?php include("config/variables.php"); ?>
+      <ul>       
+        <li><a href="home.php">HOME</a></li>
         <li><a href="menu.php">MENUS</a></li>
         <li><a href="cart.php">CART</a></li>
         <li><a href="feedback.php">FEEDBACK</a></li>
         <li><a href="about.php">ABOUT</a></li>
         <li><a href="contact.php">CONTACT</a></li>
-        <li><a href="login.php">LOGIN</a></li>
+        <?php  
+          session_start();
+          if (isset($_SESSION['email'])){          
+        ?>
+        <li><a href="<?php echo $host ; ?>/?action=profile">PROFILE</a></li>
+        <li><a href="<?php echo $host ; ?>/users/logout.php">LOGOUT</a></li>
+        <?php }else{ ?>
+        <li><a href="<?php echo $host ; ?>/?action=login">LOGIN</a></li>
+        <li><a href="<?php echo $host ; ?>/?action=register">REGISTER</a></li>         
+         <?php } ?>    
+
       </ul>
     </nav>

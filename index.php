@@ -1,62 +1,47 @@
-    <?php require_once 'includes/header.php'; ?>
+<?php 
+   require_once 'includes/header.php';
+   require_once('./config/variables.php');
+ ?>  
 
-    <!--cover-->
-    <section class="home-banner"></section>
+   <?php require_once("users/UserInterface.php"); 
+    $action = isset($_GET['action']) ? $_GET['action'] : '';
+   //  echo $action;
 
-    <!--intro-->
-    <div class="intro-wrapper">
-      <div class="intro">
-        <div>
-          <h1>Express food to raise your mood!</h1>
-          <p>
-            We offer fast food, served fresh with the highest quality of ingredients: fresh, handcut chicken,
-            buns baked fresh in our own bakeries and the most delicious burgers and pizza with a variety of toppings.
-          </p>
-        </div>
-      </div>
+    $userinterface = new UserInterface();
 
-      <div class="intro-frame">
-        <div>
-          <img class="intro-img" src="./assets/web-img-2.png" alt="girl" />
-        </div>
-      </div>
-    </div>
+    switch ($action) {
+       case 'register':
+         if(isset($_SESSION['email'])){
+            header("Location: " . $host . "/index.php?action=profile");
+            break;
+         }
+         echo  $userinterface->register();
+          break;
+       case 'login':
+         if(isset($_SESSION['email'])){
+            header("Location: " . $host . "/index.php?action=profile");
+            break;
+         }
+         echo $userinterface->login();
+          break;
+       case 'profile':
+         if(!isset($_SESSION['email'])){
+            header("Location: " . $host . "/index.php?action=login");
+            break;
+         }
+         echo $userinterface->profile();
+          break;
+       
+       default:   
+        if(isset($_SESSION['email'])){
+         header("Location: " . $host . "/index.php?action=profile");
+         break;
+        }  
+         echo $userinterface->login();
+         break;
+    }
+    
+   ?>
 
-    <!--Foods Intro-->
-    <h2 class="food-intro-h">OUR POPULAR FOODIES</h2>
 
-    <!--Popular Foodies-->
-    <div class="popular-foodies">
-      <div class="popular-foodie">
-        <div class="info-panel">
-          <h1>PIZZA</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, magnam dolorem vero explicabo sint expedita. Dolores neque eum officia quisquam, dignissimos similique sint quae laborum consequatur repellendus, consequuntur, recusandae minus!</p>
-          <a href="menu.php"><button type="button" class="menu-btn">VIEW MENU</button></a>
-        </div>
-        <div>
-          <img class="resize-img" src="./assets/pizza.png" alt="pizza">
-        </div>
-      </div>
-      <div class="popular-foodie">
-        <div class="info-panel">
-          <h1>BURGERS</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, magnam dolorem vero explicabo sint expedita. Dolores neque eum officia quisquam, dignissimos similique sint quae laborum consequatur repellendus, consequuntur, recusandae minus!</p>
-          <a href="menu.php"><button type="button" class="menu-btn">VIEW MENU</button></a>
-        </div>
-        <div>
-          <img class="resize-img" src="./assets/burger.jpg" alt="burgers">
-        </div>
-      </div>
-      <div class="popular-foodie">
-        <div class="info-panel">
-          <h1>SUBMARIENS</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, magnam dolorem vero explicabo sint expedita. Dolores neque eum officia quisquam, dignissimos similique sint quae laborum consequatur repellendus, consequuntur, recusandae minus!</p>
-          <a href="menu.php"><button type="button" class="menu-btn">VIEW MENU</button></a>
-        </div>
-        <div>
-          <img class="resize-img" src="./assets/submarines.jpg" alt="submariens">
-        </div>
-      </div>
-  </div>
-
-    <?php require_once 'includes/footer.php'; ?>
+<?php require_once 'includes/footer.php'; ?>

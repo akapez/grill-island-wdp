@@ -1,60 +1,37 @@
-/*cover design */
-.home-banner {
-  background: url(../assets/landing.jpg) no-repeat;
-  background-size: cover;
-  height: 450px;
-  width: 100%;
-  padding: 5rem calc((100vw - 1300px) / 2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/*intro*/
-.intro-wrapper {
-  display: flex;
-  flex-direction: row;
-  margin: 5% 20% 5% 20%;
-}
-
-.intro div h1 {
-  font-size: 3rem;
+.alert {
+  padding: 10px;  
+  color: white;
   margin-bottom: 5%;
 }
 
-.intro div p {
-  font-size: 1.2rem;
+.user_screen_banner {
+  height: calc(30vh - 30px);
 }
 
-.intro-img {
+.user_form{
+  border: 1px solid #000;
+  border-radius: 25px;
+  padding: 20px; 
+  margin: 2% 35% 10% 35%;  
+}
+
+.user_form h3{
+  margin-bottom: 5%;
+}
+
+.user_input { 
+  background: #f1f1f1;
   width: 100%;
+  padding: 12px;
+  border: none;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 5px;
+  resize: vertical;
 }
 
-/*food intro*/
-.food-intro-h {
-  text-align: center;
-  margin-top: 5%;
-  margin-bottom: 2%;
-}
-
-/*popular foodies*/
-.popular-foodies {
-  margin: 5% 20% 5% 20%;
-}
-
-.popular-foodie {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 10%;
-  /* padding: 5rem calc((100vw - 1300px) / 2); */
-}
-
-.info-panel{
-  padding-right: 5%;
-}
-
-.menu-btn{
-  background-color: #da0037;
+._button {
+  background-color: #DA0037;
   color: white;
   padding: 8px 18px 8px 18px;
   border: none;
@@ -65,54 +42,28 @@
   font-weight: 500;
   font-size: 15px;
   display: block;
-  margin-top: 12px;    
+  margin-top: 12px;
+  margin-bottom: 12px;
+
 }
 
-.resize-img {  
-  width: 400px;
-  object-fit: cover;
+._button :hover {
+  background-color: #DA0037;
 }
 
-@media screen and (max-width: 600px) {
-  .intro-wrapper {
-    flex-direction: column;
-    text-align: center;
-    margin: 5% 10% 5% 10%;
+@media screen and (max-width: 1024px) {
+  .user_screen_banner {
+    height: calc(25vh - 30px);
   }
-
-  .intro-img {
-    width: 60%;
-  }
-
-  .food-intro-h {
-    font-size: 25px;
-    margin-top: 10%;
-    margin-bottom: 2%;
-  }
-
-  .popular-foodies {
-    margin: 5% 10% 5% 10%;
-  }
-
-  .popular-foodie {
-    flex-direction: column;
-    text-align: center;
-    margin-bottom: 5%;
-  }
-
-  .info-panel{
-    padding-right: 0;
-  }
-
-  .menu-btn{  
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .resize-img {    
-    width: 250px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-   
+  .user_form{  
+    margin: 5%  25% 45% 25%;
   }
 }
+
+@media screen and (max-width: 600px) { 
+  .user_form{  
+    margin: 5%  10% 45% 10%;
+  }
+}
+
+

@@ -1,12 +1,12 @@
 <?php 
 
+    //user auth connection
    class Database{
   
     private  $dbname = 'grill_island';
     private  $host = '127.0.0.1:3307';
     private  $user = 'root';
-    private  $password = '';
-    // private  $charset = 'utf8mb4';    
+    private  $password = '';      
 
     public $dbh = null;
 
@@ -26,6 +26,20 @@
 
 //    $db = new Database();
 //    $db->connect();   
+  
+
+?>
+
+<?php 
+
+    //password update connection
+    $db_server = "127.0.0.1:3307";
+    $db_user   = "root";
+    $db_password = "";
+    $db_database = "grill_island";
+
+
+    $connection = mysqli_connect($db_server, $db_user, $db_password, $db_database);
 
 
 ?>

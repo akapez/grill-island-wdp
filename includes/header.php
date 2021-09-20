@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="./styles/profile.css" />
     <!--update-profile css-->    
     <link rel="stylesheet" href="./styles/updateprofile.css" />
+    <!--order history css-->    
+    <link rel="stylesheet" href="./styles/orderhistory.css" />
    
    
     <!-- CDN-font-awesome -->

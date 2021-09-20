@@ -1,7 +1,7 @@
 <?php 
 
 include_once("../config/variables.php");
-include_once("../config/conn2.php");
+include_once("../config/Database.php");
 
 if(isset($_POST['register'])){
     $name = htmlspecialchars($_POST['name']);
@@ -19,7 +19,7 @@ if(isset($_POST['register'])){
         header("Location: " . $host . "/index.php?action=register&message=" . $message[0]);
         exit();
     }else if(strlen($password) < 6){
-        $message[] = "Make sure your password has atleast 6 latter";
+        $message[] = "Make sure your password has 6 character";
         header("Location: " . $host . "/index.php?action=register&message=" . $message[0]);   
         exit();
     }else if($password !== $confirmPassword){

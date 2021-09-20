@@ -1,12 +1,12 @@
 <?php 
 
    class Database{
-
+  
     private  $dbname = 'grill_island';
     private  $host = '127.0.0.1:3307';
     private  $user = 'root';
     private  $password = '';
-    // private  $charset = 'utf8mb4';
+    // private  $charset = 'utf8mb4';    
 
     public $dbh = null;
 

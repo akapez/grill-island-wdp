@@ -5,7 +5,7 @@ class UserInterface
 
   public function login()
   {
-    $error = isset($_GET['message']) ? $_GET['message'] : '';
+    $error = isset($_GET['message']) ? $_GET['message'] : '';   
 
     if ($error) {
       $errorMessage = '<div class="alert" style="background-color: #FF2626;"> <p style="font-size: 13px">' . $error . '</p></div>';
@@ -17,7 +17,7 @@ class UserInterface
             <div class="user_form"> 
             <h3>LOGIN</h3>
             <form method="POST" action="users/login.php" autocomplete="off">
-            ' . $errorMessage . ' 
+            ' . $errorMessage . '          
             <input  class="user_input" type="text" name="email" placeholder="E-mail">   
             <input  class="user_input" type="password" name="password" placeholder="Password">  
             <button class="_button" type="submit" name="login" >Login</button>
@@ -60,58 +60,26 @@ class UserInterface
     } else {
       $successMessage =  '';
     }
+   
     return '            
-            <section class="profile-banner"></section>
+        <section class="profile-banner"></section>
 
-            <!--user edit form-->
-            <div class="profile-form">
+        <div class="profile">
             ' . $successMessage . ' 
-            <form method="" action="" autocomplete="off">
-            <div class="profile-container">
-            <h3>PROFILE</h3>
-            <hr />
-
-            <label for="name"><b>Name</b></label>
-            <input type="text" name="name" id="name" required />
-
-            <label for="email"><b>Email</b></label>            
-            <input type="text" name="email" id="email" required />
-
-            <label for="password"><b>Password</b></label>
-            <input type="password" name="password" id="password" required />
-           
-            <label for="confirmpassword"><b>Confirm Password</b></label>
-            <input type="password" name="confirmpassword" id="confirmpassword" required />           
-          
-            <button id="submit" type="submit" name="submit" class="updatebtn">
-              UPDATE
-            </button>
+            <div class="card" style="background: #0F52BA">           
+              <div class="card_container">
+                <a class="profile_link" href="updateprofile.php"><h4><b>UPDATE USER PROFILE</b></h4></a>                  
+              </div>
             </div>
-            </form>
+            <div class="card" style="background: #261C2C">           
+            <div class="card_container">
+              <a class="profile_link" href="orderhistory.php"><h4><b>VIEW ORDER HISTORY</b></h4></a>                  
             </div>
+          </div>
+        </div>
 
-            <div class="orders-section">
-            <h3>ORDER HISTORY</h3>
-            <div class="order-container">
-            
-            <hr />
-            <tr>
-            <table id="orders">
-            <th>TOTAL (Rs.)</th>
-            <th>ID</th>
-            <th>STATUS</th>
-            <th>PAID</th>
-            <tr>
-            </tr>
-            <td>200.00</td>
-            <td>1</td>
-            <td>Delivered</td>
-            <td>YES</td>
-            </table>
-            </tr>
-            </div>
-            </div>
-            ';
+        
+        ';
   }
 }
 

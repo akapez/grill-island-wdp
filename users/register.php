@@ -1,7 +1,7 @@
 <?php 
 
 include_once("../config/variables.php");
-include_once("../config/Database.php");
+include_once("../config/conn2.php");
 
 if(isset($_POST['register'])){
     $name = htmlspecialchars($_POST['name']);

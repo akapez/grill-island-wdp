@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="./styles/index.css" /> 
     <!--profile css-->    
     <link rel="stylesheet" href="./styles/profile.css" />
+    <!--update-profile css-->    
+    <link rel="stylesheet" href="./styles/updateprofile.css" />
    
    
     <!-- CDN-font-awesome -->

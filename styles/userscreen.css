@@ -1,0 +1,107 @@
+.alert {
+  padding: 10px;  
+  color: white;
+  margin-bottom: 5%;
+}
+
+.pro-banner {
+  height: calc(10vh - 15px);
+}
+
+/*form-section*/
+.profile-form {
+  margin: 5% 20% 3% 20%;
+  
+}
+
+.profile-container {
+  padding: 16px;
+  background-color: white;
+}
+
+.profile-form .profile-container input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+.profile-form .profile-container input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.updatebtn {
+  background-color: #da0037;
+  color: white;
+  padding: 8px 18px 8px 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+  .profile-form {
+     height: 65vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profile-form {
+    margin: 10% 10% 40% 10%;
+  }
+}
+
+
+/*order history table*/
+.order_page_banner {
+  height: calc(30vh - 30px);
+}
+
+.orders-section {
+  margin: 0 10% 5% 10%;
+}
+
+#orders {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#orders td,
+#orders th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#orders tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#orders tr:hover {
+  background-color: #ddd;
+}
+
+#orders th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}

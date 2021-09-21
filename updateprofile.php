@@ -2,7 +2,6 @@
 require_once 'includes/header.php'; 
 include_once("./config/Database.php");
 include_once("./config/variables.php");
-session_start();
 if(!$_SESSION['email']) {
   header("location: " .$host); 
   die(); 

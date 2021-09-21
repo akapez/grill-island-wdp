@@ -23,7 +23,7 @@
 
       <input class="fb_input" type="number" placeholder="Phone Number" id="phone" name="phone" required />
 
-      <label for="age">Select Gender</label><br />
+      <label for="gender">Select Gender</label><br />
       <input type="radio" id="male" name="gender" value="Male" />
       <label for="male">Male</label><br />
       <input type="radio" id="female" name="gender" value="Female" />

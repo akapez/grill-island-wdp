@@ -122,7 +122,7 @@ class UserInterface
             ' . $successMessage . ' 
             <div class="card" style="background: #261C2C">           
               <div class="card_container">
-                <a class="profile_link" href=""><h4><i class="fas fa-hamburger" style="margin-right: 5px"></i><b>ADD FOOD ITEMS</b></h4></a>                  
+                <a class="profile_link" href="foods.php"><h4><i class="fas fa-hamburger" style="margin-right: 5px"></i><b>ADD FOOD ITEMS</b></h4></a>                  
               </div>
             </div>
 

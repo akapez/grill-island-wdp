@@ -24,10 +24,10 @@
     <link rel="stylesheet" href="./styles/index.css" /> 
     <!--profile css-->    
     <link rel="stylesheet" href="./styles/profile.css" />
-    <!--update-profile css-->    
-    <link rel="stylesheet" href="./styles/updateprofile.css" />
-    <!--order history css-->    
-    <link rel="stylesheet" href="./styles/orderhistory.css" />
+    <!--user screen css-->    
+    <link rel="stylesheet" href="./styles/userscreen.css" />
+    <!--admin screen css-->    
+    <link rel="stylesheet" href="./styles/adminscreen.css" />
    
    
     <!-- CDN-font-awesome -->

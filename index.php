@@ -14,6 +14,9 @@
          if(isset($_SESSION['email'])){
             header("Location: " . $host . "/index.php?action=profile");
             break;
+         }else if(isset($_SESSION['username'])){
+            header("Location: " . $host . "/index.php?action=dashboard");       
+            break;
          }
          echo  $userinterface->register();
           break;
@@ -21,9 +24,12 @@
          if(isset($_SESSION['email'])){
             header("Location: " . $host . "/index.php?action=profile");
             break;
+         }else if(isset($_SESSION['username'])){
+            header("Location: " . $host . "/index.php?action=dashboard");       
+            break;
          }
          echo $userinterface->login();
-          break;
+          break;      
        case 'profile':
          if(!isset($_SESSION['email'])){
             header("Location: " . $host . "/index.php?action=login");
@@ -31,14 +37,31 @@
          }
          echo $userinterface->profile();
           break;
+       case 'admin':
+         if(isset($_SESSION['username'])){
+            header("Location: " . $host . "/index.php?action=dashboard");
+            break;
+         }else if(isset($_SESSION['email'])){
+            header("Location: " . $host . "/index.php?action=profile");       
+            break;
+         }
+         echo $userinterface->admin();                
+         break;      
+       case 'dashboard':
+         if(!isset($_SESSION['username'])){
+            header("Location: " . $host . "/index.php?action=admin");
+            break;
+         }
+         echo $userinterface->dashboard();
+         break;
        
        default:   
         if(isset($_SESSION['email'])){
-         header("Location: " . $host . "/index.php?action=profile");
+         header("Location: " . $host . "/index.php?action=profile");       
          break;
-        }  
+        }
          echo $userinterface->login();
-         break;
+         break;        
     }
     
    ?>

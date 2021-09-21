@@ -1,13 +1,24 @@
-.profile-banner {
+.user-profile-banner {
   height: calc(30vh - 50px);
 }
 
-/*form-section*/
-.profile{
+.admin-profile-banner {
+  height: calc(25vh - 50px);
+}
+
+
+.user-profile{
   margin: 5% 20% 3% 20%; 
   height: 40vh;
  
 }
+
+.admin-profile{
+  margin: 5% 20% 3% 20%; 
+  height: 70vh;
+ 
+}
+
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -39,14 +50,22 @@
 
 
 @media screen and (max-width: 1024px) {
-  .profile{
-    height: 45vh;
+  .user-profile{
+    height: 50vh;
+  }
+
+  .admin-profile{
+    height: 55vh;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .profile{
+  .user-profile{
     margin: 5% 10% 5% 10%;
+  }
+
+  .admin-profile{
+    margin: 5% 5% 5% 5%;
   }
 }
 

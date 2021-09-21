@@ -5,5 +5,5 @@ session_start();
 session_unset();
 session_destroy();
 
-header("Location: " . $host );
+header("Location: " . $host . "/home.php");
 ?>

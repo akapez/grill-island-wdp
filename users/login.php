@@ -17,8 +17,7 @@ if(isset($_POST['login'])){
         $message[] = "Make sure your password has atleast 6 latter";
         header("Location: " . $host . "/index.php?action=register&message=" . $message[0]);   
         exit();
-    }else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "Something went wrong with email";
+    }else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {      
         $message[] = "This is not a valid email address";
         header("Location: " . $host . "/index.php?action=login&message=" . $message[0]);
         exit();        

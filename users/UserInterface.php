@@ -62,18 +62,18 @@ class UserInterface
     }
    
     return '            
-        <section class="profile-banner"></section>
+        <section class="user-profile-banner"></section>
 
-        <div class="profile">
+        <div class="user-profile">
             ' . $successMessage . ' 
-            <div class="card" style="background: #0F52BA">           
+            <div class="card" style="background: #261C2C">           
               <div class="card_container">
-                <a class="profile_link" href="updateprofile.php"><h4><b>UPDATE USER PROFILE</b></h4></a>                  
+                <a class="profile_link" href="updateprofile.php"><h4><i class="far fa-user-circle" style="margin-right: 5px"></i><b>UPDATE USER PROFILE</b></h4></a>                  
               </div>
             </div>
             <div class="card" style="background: #261C2C">           
             <div class="card_container">
-              <a class="profile_link" href="orderhistory.php"><h4><b>VIEW ORDER HISTORY</b></h4></a>                  
+              <a class="profile_link" href="orderhistory.php"><h4><i class="fas fa-shopping-basket" style="margin-right: 5px"></i><b>VIEW ORDER HISTORY</b></h4></a>                  
             </div>
           </div>
         </div>
@@ -81,6 +81,82 @@ class UserInterface
         
         ';
   }
+
+  public function admin()
+  {
+    $error = isset($_GET['message']) ? $_GET['message'] : '';   
+
+    if ($error) {
+      $errorMessage = '<div class="alert" style="background-color: #FF2626;"> <p style="font-size: 13px">' . $error . '</p></div>';
+    } else {
+      $errorMessage =  '';
+    }
+    return '
+            <section class="user_screen_banner"></section>
+            <div class="user_form"> 
+            <h3>ADMIN LOGIN</h3>
+            <form method="POST" action="users/admin.php" autocomplete="off">
+            ' . $errorMessage . '          
+            <input  class="user_input" type="text" name="username" placeholder="User Name">   
+            <input  class="user_input" type="password" name="password" placeholder="Password">  
+            <button class="_button" type="submit" name="admin" >Login</button>
+            </form>   
+            </div>          
+            ';
+  }
+
+  public function dashboard()
+  {
+    $success = isset($_GET['message']) ? $_GET['message'] : '';
+
+    if ($success) {
+      $successMessage = '<div class="alert" style="background-color: #50CB93;"><p style="font-size: 13px">' . $success . '</p></div>';
+    } else {
+      $successMessage =  '';
+    }
+   
+    return '            
+        <section class="admin-profile-banner"></section>
+
+        <div class="admin-profile">
+            ' . $successMessage . ' 
+            <div class="card" style="background: #261C2C">           
+              <div class="card_container">
+                <a class="profile_link" href=""><h4><i class="fas fa-hamburger" style="margin-right: 5px"></i><b>ADD FOOD ITEMS</b></h4></a>                  
+              </div>
+            </div>
+
+            <div class="card" style="background: #261C2C">           
+            <div class="card_container">
+              <a class="profile_link" href=""><h4><i class="fas fa-hamburger" style="margin-right: 5px"></i><b>VIEW FOOD ITEMS</b></h4></a>                  
+            </div>            
+            </div>
+
+            <div class="card" style="background: #261C2C">           
+            <div class="card_container">
+              <a class="profile_link" href=""><h4><i class="fas fa-shopping-basket" style="margin-right: 5px"></i><b>ORDER MANAGE</b></h4></a>                  
+            </div>            
+            </div>
+
+            <div class="card" style="background: #261C2C">           
+            <div class="card_container">
+              <a class="profile_link" href=""><h4><i class="far fa-comments" style="margin-right: 5px"></i><b>VIEW CUSTOMER FEEDBACKS</b></h4></a>                  
+            </div>            
+            </div>
+
+            <div class="card" style="background: #261C2C">           
+            <div class="card_container">
+              <a class="profile_link" href=""><h4><i class="far fa-address-book" style="margin-right: 5px"></i><b>VIEW CONTACTS</b></h4></a>                  
+            </div>            
+            </div>
+            
+        </div>
+
+        
+        ';
+  }
+
+  
 }
 
 ?>

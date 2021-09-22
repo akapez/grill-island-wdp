@@ -1,4 +1,4 @@
-<?php require_once 'includes/header.php'; ?>
+<?php require_once 'components/header.php'; ?>
 
 <!--Contact Section-->
 <div class="contacts">
@@ -57,4 +57,4 @@
 </div>
 </div>
 
-<?php require_once 'includes/footer.php'; ?>
+<?php require_once 'components/footer.php'; ?>

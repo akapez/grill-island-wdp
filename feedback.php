@@ -1,4 +1,4 @@
-<?php require_once 'includes/header.php'; ?>
+<?php require_once 'components/header.php'; ?>
 
 <section class="feedback-banner"></section>
 
@@ -38,4 +38,4 @@
   </form>
 </div>
 
-<?php require_once 'includes/footer.php'; ?>
+<?php require_once 'components/footer.php'; ?>

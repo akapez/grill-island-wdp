@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.1)), url(../assets/louis-hansel-8qT_cml7M68-unsplash.jpg);
+  background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.1)), url(../assets/contact-cover.jpg);
   background-size: cover;
 }
 

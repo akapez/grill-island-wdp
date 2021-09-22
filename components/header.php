@@ -59,12 +59,12 @@
           if (isset($_SESSION['email'])){          
         ?>
         <li><a href="<?php echo $host ; ?>/?action=profile">PROFILE</a></li>
-        <li><a href="<?php echo $host ; ?>/users/logout.php">LOGOUT</a></li>
+        <li><a href="<?php echo $host ; ?>/controllers/logout.php">LOGOUT</a></li>
         <?php }
         else if(isset($_SESSION['username'])){
         ?>
         <li><a href="<?php echo $host ; ?>/?action=dashboard">DASHBOARD</a></li>
-        <li><a href="<?php echo $host ; ?>/users/logout.php">LOGOUT</a></li>
+        <li><a href="<?php echo $host ; ?>/controllers/logout.php">LOGOUT</a></li>
         <?php }else{ ?>  
         <li><a href="<?php echo $host ; ?>/?action=login">LOGIN</a></li>
         <li><a href="<?php echo $host ; ?>/?action=register">REGISTER</a></li>

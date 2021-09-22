@@ -1,4 +1,4 @@
-<?php require_once 'includes/header.php'; ?>
+<?php require_once 'components/header.php'; ?>
 
 <!--banner-->
 <section class="order_page_banner"></section>
@@ -25,4 +25,4 @@
   </div>
 </div>
 
-<?php require_once 'includes/footer.php'; ?>
+<?php require_once 'components/footer.php'; ?>

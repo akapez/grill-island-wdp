@@ -16,7 +16,7 @@ class UserInterface
             <section class="user_screen_banner"></section>
             <div class="user_form"> 
             <h3>LOGIN</h3>
-            <form method="POST" action="users/login.php" autocomplete="off">
+            <form method="POST" action="controllers/login.php" autocomplete="off">
             ' . $errorMessage . '          
             <input  class="user_input" type="text" name="email" placeholder="E-mail">   
             <input  class="user_input" type="password" name="password" placeholder="Password">  
@@ -39,7 +39,7 @@ class UserInterface
             <section class="user_screen_banner"></section>
             <div class="user_form"> 
             <h3>REGISTER</h3>
-            <form method="POST" action="users/register.php" autocomplete="off">
+            <form method="POST" action="controllers/register.php" autocomplete="off">
             ' . $errorMessage . ' 
             <input class="user_input" type="text" name="name" id="name" placeholder="Name" />    
             <input class="user_input" type="text" name="email" id="email" placeholder="E-mail" />    
@@ -95,7 +95,7 @@ class UserInterface
             <section class="user_screen_banner"></section>
             <div class="user_form"> 
             <h3>ADMIN LOGIN</h3>
-            <form method="POST" action="users/admin.php" autocomplete="off">
+            <form method="POST" action="controllers/admin.php" autocomplete="off">
             ' . $errorMessage . '          
             <input  class="user_input" type="text" name="username" placeholder="User Name">   
             <input  class="user_input" type="password" name="password" placeholder="Password">  

@@ -1,5 +1,5 @@
 <?php 
-require_once 'includes/header.php'; 
+require_once 'components/header.php'; 
 include_once("./config/Database.php");
 include_once("./config/variables.php");
 if(!$_SESSION['email']) {
@@ -41,7 +41,7 @@ if(!$_SESSION['email']) {
           
         }
     ?>
-  <form method="POST" action="./users/profile.php" autocomplete="off">
+  <form method="POST" action="./controllers/profile.php" autocomplete="off">
       <?php           
        
         $current_user = $_SESSION['email'];
@@ -82,4 +82,4 @@ if(!$_SESSION['email']) {
   </form>
 </div>
 
-<?php require_once 'includes/footer.php'; ?>
+<?php require_once 'components/footer.php'; ?>

@@ -1,9 +1,9 @@
 <?php 
-   require_once 'includes/header.php';
+   require_once 'components/header.php';
    require_once('./config/variables.php');
  ?>  
 
-   <?php require_once("users/UserInterface.php"); 
+   <?php require_once("controllers/UserInterface.php"); 
     $action = isset($_GET['action']) ? $_GET['action'] : '';
    //  echo $action;
 
@@ -67,4 +67,4 @@
    ?>
 
 
-<?php require_once 'includes/footer.php'; ?>
+<?php require_once 'components/footer.php'; ?>

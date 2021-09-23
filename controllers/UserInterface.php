@@ -68,12 +68,12 @@ class UserInterface
             ' . $successMessage . ' 
             <div class="card" style="background: #261C2C">           
               <div class="card_container">
-                <a class="profile_link" href="updateprofile.php"><h4><i class="far fa-user-circle" style="margin-right: 5px"></i><b>UPDATE USER PROFILE</b></h4></a>                  
+                <a class="profile_link" href="update_profile.php"><h4><i class="far fa-user-circle" style="margin-right: 5px"></i><b>UPDATE USER PROFILE</b></h4></a>                  
               </div>
             </div>
             <div class="card" style="background: #261C2C">           
             <div class="card_container">
-              <a class="profile_link" href="orderhistory.php"><h4><i class="fas fa-shopping-basket" style="margin-right: 5px"></i><b>VIEW ORDER HISTORY</b></h4></a>                  
+              <a class="profile_link" href="order_history.php"><h4><i class="fas fa-shopping-basket" style="margin-right: 5px"></i><b>VIEW ORDER HISTORY</b></h4></a>                  
             </div>
           </div>
         </div>
@@ -122,13 +122,13 @@ class UserInterface
             ' . $successMessage . ' 
             <div class="card" style="background: #261C2C">           
               <div class="card_container">
-                <a class="profile_link" href="foods.php"><h4><i class="fas fa-hamburger" style="margin-right: 5px"></i><b>ADD FOOD ITEMS</b></h4></a>                  
+                <a class="profile_link" href="add_menu.php"><h4><i class="fas fa-hamburger" style="margin-right: 5px"></i><b>ADD FOOD ITEMS</b></h4></a>                  
               </div>
             </div>
 
             <div class="card" style="background: #261C2C">           
             <div class="card_container">
-              <a class="profile_link" href=""><h4><i class="fas fa-hamburger" style="margin-right: 5px"></i><b>VIEW FOOD ITEMS</b></h4></a>                  
+              <a class="profile_link" href="view_menu_list.php"><h4><i class="fas fa-hamburger" style="margin-right: 5px"></i><b>VIEW FOOD ITEMS</b></h4></a>                  
             </div>            
             </div>
 

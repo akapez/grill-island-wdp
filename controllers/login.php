@@ -1,7 +1,7 @@
 <?php 
 
 include_once("../config/variables.php");
-include_once("../config/Database.php");
+include_once("../config/DatabaseConn1.php");
 
 if(isset($_POST['login'])){
     $email = htmlspecialchars($_POST['email']);

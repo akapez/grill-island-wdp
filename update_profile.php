@@ -1,6 +1,7 @@
+
 <?php 
 require_once 'components/header.php'; 
-include_once("./config/Database.php");
+include_once("./config/DatabaseConn1.php");
 include_once("./config/variables.php");
 if(!$_SESSION['email']) {
   header("location: " .$host); 
@@ -69,7 +70,7 @@ if(!$_SESSION['email']) {
             <label for="confirmpassword"><b>Confirm Password</b></label>
             <input type="password" name="userconfirmpassword"/>
      
-            <button type="submit" name="update" value="Update" class="updatebtn">
+            <button type="submit" name="update-profile" value="Profile" class="update-btn">
                UPDATE
             </button>
             </div>

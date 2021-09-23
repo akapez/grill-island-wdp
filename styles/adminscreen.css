@@ -1,18 +1,24 @@
-.fooditems-banner {
+.alert {
+  padding: 10px;  
+  color: white;
+  margin-bottom: 5%;
+}
+
+.menu-manage-banner {
   height: calc(10vh - 15px);
 }
 
 /*form-section*/
-.fooditems-form {
+.menu-manage-form {
   margin: 5% 20% 3% 20%;
 }
 
-.fooditems-container {
+.menu-manage-container {
   padding: 16px;
   background-color: white;
 }
 
-.fooditems-form .fooditems-container input[type="text"], input[type="file"] {
+.menu-manage-form .menu-manage-container input[type="text"], input[type="file"] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -21,7 +27,7 @@
   background: #f1f1f1;
 }
 
-.fooditems-form .fooditems-container input[type="text"]:focus {
+.menu-manage-form .menu-manage-container input[type="text"]:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -31,8 +37,7 @@ hr {
   margin-bottom: 25px;
 }
 
-.fooditembtn {
-  background-color: #da0037;
+.menu-manage-btn { 
   color: white;
   padding: 8px 18px 8px 18px;
   border: none;
@@ -48,13 +53,63 @@ hr {
 }
 
 @media screen and (max-width: 1024px) {
-  .fooditems-form {
+  .menu-manage-form {
     height: 65vh;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .fooditems-form {
+  .menu-manage-form {
     margin: 10% 10% 40% 10%;
   }
 }
+
+/*menu list table*/
+.menu-list-banner {
+  height: calc(30vh - 30px);
+}
+
+.menu-list-section {
+  margin: 0 10% 5% 10%;
+}
+
+#menu-list {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#menu-list td,
+#menu-list th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#menu-list tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#menu-list tr:hover {
+  background-color: #ddd;
+}
+
+#menu-list th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+
+.table-btn{
+  color: white;
+  padding: 8px 15px 8px 15px;
+  border: none;
+  cursor: pointer; 
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 12px; 
+  margin: 3px;
+}
+

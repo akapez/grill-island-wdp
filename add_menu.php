@@ -18,14 +18,14 @@ if(!$_SESSION['username']) {
     if (isset($_POST['add-menu'])) {
         $foodName = $_POST['foodName'];
         $variety = $_POST['variety'];
-        $size = $_POST['size'] ?? 'regular';
+        $size = $_POST['size'] ?? 'Regular';
         $price = $_POST['price'];    
 
         $random_num = rand();
 
         $orig_file = $_FILES["foodImage"]["tmp_name"];
         $ext = pathinfo($_FILES["foodImage"]["name"], PATHINFO_EXTENSION);       
-        $target_dir = 'public/foodimages';
+        $target_dir = 'uploads/';
         $image_path =  "$target_dir$random_num.$ext";
         move_uploaded_file($orig_file,$image_path);
 
@@ -60,12 +60,12 @@ if(!$_SESSION['username']) {
             <input type="text" name=" variety" required/>
 
             <label for="size"><b>Size</b></label><br />
-            <input type="radio" name="size" value="regular" />
-            <label for="regular">Regular</label><br />
-            <input type="radio" name="size" value="medium" />
-            <label for="medium">Medium</label><br />
-            <input type="radio" name="size" value="large" />
-            <label for="large">Large</label><br /><br />
+            <input type="radio" name="size" value="Regular" />
+            <label for="Regular">Regular</label><br />
+            <input type="radio" name="size" value="Medium" />
+            <label for="Medium">Medium</label><br />
+            <input type="radio" name="size" value="Large" />
+            <label for="Large">Large</label><br /><br />
 
             <label for="price"><b>Price</b></label>
             <input type="text" name="price" required/>

@@ -61,6 +61,7 @@ hr {
 @media screen and (max-width: 600px) {
   .menu-manage-form {
     margin: 10% 10% 40% 10%;
+    height: 80vh;
   }
 }
 

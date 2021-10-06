@@ -1,5 +1,5 @@
 <?php
-$host = '127.0.0.1:3307';
+$host = 'localhost';
 $db = 'grill_island';
 $user = 'root';
 $pass = '';

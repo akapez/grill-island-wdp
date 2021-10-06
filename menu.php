@@ -17,16 +17,18 @@
     require_once 'config/DatabaseConn2.php';
     $result = $menu->getMenuData();
   ?>
-  <div class="menu">
+  <div class="menu-wrapper">
   <?php  while ($r = $result->fetch(PDO::FETCH_ASSOC)) { ?>
+    <div class="menu">
+    <img class="menu-img" src="<?php echo $r['foodImage']; ?>">
     <h4><?php echo $r['foodName']; ?></h4>
-    <?php echo '<img class="menu-img" src="data:image/png;base64,'.base6{$rfoodImage}'>'?>
-    <p> <?php echo $r['price']; ?> </p>
+    <p> RS. <?php echo $r['price']; ?> </p>
     <div>
       <button class="order_button" type="submit">Order Now</button>
     </div>
+    </div>
+    <?php } ?>
   </div>
-  <?php } ?>
 </div>
 
 <?php require_once 'components/footer.php'; ?>

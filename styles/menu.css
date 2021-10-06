@@ -50,9 +50,19 @@
 /*menu container*/
 .menu_container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 50px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.menu-wrapper{
+    margin: 80px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: space-between;
 }
 
 .menu {
@@ -73,6 +83,10 @@
   object-fit: cover;
   height: 250px;
   width: 100%;
+}
+
+.menu p{
+  color: #da0037;
 }
 
 .order_button {

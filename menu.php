@@ -1,4 +1,12 @@
+<!--start session-->
+
+session_start();
+
 <?php require_once 'components/header.php'; ?>
+
+if(isset($_POST['order'])){
+  
+}
 
 <!--banner-->
 <section class="menu_banner"></section>
@@ -22,9 +30,11 @@
     <div class="menu">
     <img class="menu-img" src="<?php echo $r['foodImage']; ?>">
     <h4><?php echo $r['foodName']; ?></h4>
-    <p> RS. <?php echo $r['price']; ?> </p>
+    <p> <?php echo $r['variety']; ?> </p>
+    <p> <?php echo $r['size']; ?> </p>
+    <p class="price"> RS. <?php echo $r['price']; ?> </p>
     <div>
-      <button class="order_button" type="submit">Order Now</button>
+      <button class="order_button" type="submit" name="order">Order Now</button>
     </div>
     </div>
     <?php } ?>

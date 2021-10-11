@@ -1,12 +1,10 @@
-<!--start session-->
+<?php
 
-session_start();
+require_once 'components/header.php'; 
 
-<?php require_once 'components/header.php'; ?>
-
-if(isset($_POST['order'])){
-  
-}
+if(isset($_POST['add'])){
+  print_r($_POST['id']);
+} ?>
 
 <!--banner-->
 <section class="menu_banner"></section>
@@ -34,7 +32,8 @@ if(isset($_POST['order'])){
     <p> <?php echo $r['size']; ?> </p>
     <p class="price"> RS. <?php echo $r['price']; ?> </p>
     <div>
-      <button class="order_button" type="submit" name="order">Order Now</button>
+      <button class="order_button" type='submit' name='add'>Order Now</button>
+      <input type='hidden' name='id' value=<?php echo $r['id'] ?>>
     </div>
     </div>
     <?php } ?>

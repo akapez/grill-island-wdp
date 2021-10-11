@@ -4,7 +4,8 @@ class Database
 {
 
     private  $dbname = 'grill_island';
-    private  $host = 'localhost';
+    // private  $host = 'localhost';
+    private  $host = '127.0.0.1:3307';
     private  $user = 'root';
     private  $password = '';
 
@@ -33,7 +34,8 @@ class Database
 
 <?php
 //profile update
-$db_server = "localhost";
+// $db_server = "localhost";
+$db_server = "127.0.0.1:3307";
 $db_user   = "root";
 $db_password = "";
 $db_database = "grill_island";

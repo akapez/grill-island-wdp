@@ -65,6 +65,14 @@ td .qty_input{
   padding: 5px;
 }
 
+.removeBtn{
+  background-color: #da0037;
+  color: #ffff;
+  border: none;
+  padding: 4px 5px 4px 5px;
+  cursor: pointer;
+}
+
 td a{
   color: #da0037;
   font-size: 12px;

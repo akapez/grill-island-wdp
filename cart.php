@@ -1,4 +1,21 @@
-<?php require_once 'components/header.php'; ?>
+<?php
+require_once 'components/header.php';
+require_once 'config/DatabaseConn2.php';
+require_once 'components/cart.php';
+
+if (isset($_POST['remove'])){
+  if ($_GET['action'] == 'remove'){
+      foreach ($_SESSION['cart'] as $key => $value){
+          if($value["food_id"] == $_GET['id']){
+              unset($_SESSION['cart'][$key]);
+              echo "<script>alert('Item has been Removed...!')</script>";
+              echo "<script>window.location = 'cart.php'</script>";
+          }
+      }
+  }
+}
+
+?>
 
 <section class="cart_banner"></section>
 
@@ -13,21 +30,31 @@
           <th>Quantity</th>
           <th>Sub Total</th>
         </tr>
-        <tr>
-          <td>
-            <div class="cart_info">
-              <img src="./assets/pizza.png" alt="food-item">
-              <div>
-                <h4>Pizza</h4>
-                <small>Rs. 1000.00</small>
-                <br>
-                <a href="">Remove</a>
-              </div>
-            </div>
-          </td>
-          <td><input class="qty_input" type="number" value="1"></td>
-          <td>Rs. 1000.00</td>
-        </tr>       
+
+
+        <?php
+
+        $total = 0;
+        if (isset($_SESSION['cart'])) {
+          $food_id = array_column($_SESSION['cart'], 'food_id');
+
+          $result =  $menu->getMenuData();
+          while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+            foreach ($food_id as $id) {
+              if ($row['id'] == $id) {
+                cartElement($row['foodImage'], $row['foodName'], $row['price'], $row['id']);
+                $total = $total + (int)$row['price'];
+              }
+            }
+          }
+        } else {
+          echo "<h5>Cart is Empty</h5>";
+        }
+
+        ?>
+
+
+
       </table>
     </div>
 
@@ -36,12 +63,27 @@
     <div class="cart_container">
       <h4>
         Cart
-        <span class="price" style="color: black"><i class="fa fa-shopping-cart"></i> <b>4</b></span>
+        <span class="price" style="color: black"><i class="fa fa-shopping-cart"></i>
+          <b>
+            <?php
+            if (isset($_SESSION['cart'])) {
+              $count  = count($_SESSION['cart']);
+              echo "$count";
+            } else {
+              echo "0";
+            }
+            ?>
+          </b>
+        </span>
       </h4>
       <hr />
       <p>
+        Delivery Charges
+        <span class="price" style="color: #F0A500">Free</span>
+      </p>
+      <p>
         Total
-        <span class="price" style="color: black"><b>Rs.</b> 2000.00</span>
+        <span class="price" style="color: black"><b>Rs.</b> <?php echo $total; ?></span>
       </p>
       <button id="submit" type="submit" name="submit" class="checkout_btn">
         CHECKOUT

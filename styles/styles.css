@@ -101,6 +101,20 @@ a:hover {
   }
 }
 
+.badge{
+  background: #009688;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-right: 10px;
+  margin-left: 2px; */
+}
+
 @media screen and (max-width: 320px) {
   .header-logo {
     margin-top: 22px;

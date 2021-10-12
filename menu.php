@@ -1,12 +1,8 @@
-<!--start session-->
+<?php require_once 
 
-session_start();
+'components/header.php'; 
 
-<?php require_once 'components/header.php'; ?>
-
-if(isset($_POST['order'])){
-  
-}
+?>
 
 <!--banner-->
 <section class="menu_banner"></section>

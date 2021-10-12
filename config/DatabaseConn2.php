@@ -15,8 +15,12 @@ try {
 }
 
 require_once './controllers/menuItems.php';
+
+require_once './controllers/feedbackpost.php';
+
 $menu = new menuItems($pdo);
 
 
+$feedback = new feedback($pdo);
 
 ?> 

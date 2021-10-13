@@ -1,3 +1,4 @@
+ 
  <!--footer design-->
  <footer>
       <div class="wrapper">
@@ -27,7 +28,6 @@
           </div>
         </div>
       </div>
-    </footer>    
-   
+    </footer>     
   </body>
 </html>

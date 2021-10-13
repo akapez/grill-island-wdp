@@ -65,6 +65,14 @@ td .qty_input{
   padding: 5px;
 }
 
+td .price_input{
+  width: 100px;
+  height: 20px;
+  padding: 5px;
+  background: none;
+  border: none;
+}
+
 .removeBtn{
   background-color: #da0037;
   color: #ffff;

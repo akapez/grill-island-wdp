@@ -1,4 +1,11 @@
-<?php require_once 'components/header.php'; ?>
+<?php require_once 'components/header.php';
+include_once("./config/DatabaseConn1.php");
+include_once("./config/variables.php");
+if (!$_SESSION['email']) {
+  header("location: " . $host);
+  die();
+}
+?>
 
 <!--banner-->
 <section class="order_page_banner"></section>
@@ -12,15 +19,35 @@
       <tr>
         <th>ID</th>
         <th>TOTAL (Rs.)</th>
-        <th>PAID</th>
+        <th>DATE</th>
         <th>STATUS</th>
       </tr>
-      <tr>
-        <td>1</td>
-        <td>200.00</td>
-        <td>YES</td>
-        <td>Delivered</td>
-      </tr>
+    
+        <?php
+
+        $current_user = $_SESSION['email'];
+        $sql = "SELECT * FROM orders WHERE email='$current_user'";
+
+        $fetch_result = mysqli_query($connection, $sql);
+
+        if ($fetch_result) {
+          if (mysqli_num_rows($fetch_result) > 0) {
+            while ($row = mysqli_fetch_array($fetch_result)) {
+              // print_r($row);
+        ?>
+          <tr>
+              <td><?php echo $row['id']; ?></td>
+              <td><?php echo $row['fullAmount']; ?></td>
+              <td><?php echo $row['orderDate']; ?></td>
+              <td><?php echo $row['status']; ?></td>
+          </tr>
+        <?php
+            }
+          }
+        }
+        ?>
+
+ 
     </table>
   </div>
 </div>

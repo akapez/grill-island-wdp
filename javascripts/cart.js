@@ -14,7 +14,7 @@ function update_amounts(){
             sum+=amount;
             $(this).find('.amount').text(''+amount);
         });
-  $('.total').text(sum);
+  $('.total').text(sum).val(sum);
 }
 
 

@@ -15,6 +15,9 @@ try {
     throw new PDOException($e->getMessage());
 }
 
+require_once './controllers/order.php';
+$order = new order($pdo);
+
 require_once './controllers/menuItems.php';
 $menu = new menuItems($pdo);
 

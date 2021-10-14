@@ -122,6 +122,8 @@ span.price {
   color: grey;
 }
 
+
+
 @media (max-width: 1024px) {
  .cart_banner{
   height: calc(20vh - 15px);
@@ -145,3 +147,10 @@ span.price {
   }
 }
 
+
+.cart_input{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}

@@ -50,19 +50,9 @@
 /*menu container*/
 .menu_container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  margin-left: 50px;
-  margin-right: 50px;
-}
-
-.menu-wrapper{
-    margin: 80px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
 .menu {
@@ -85,10 +75,6 @@
   width: 100%;
 }
 
-.menu .price{
-  color: #da0037;
-}
-
 .order_button {
   background-color: #da0037;
   text-transform: uppercase;
@@ -103,5 +89,3 @@
   display: inline-block;
   cursor: pointer;
 }
-
-

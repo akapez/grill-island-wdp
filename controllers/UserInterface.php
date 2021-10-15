@@ -134,7 +134,7 @@ class UserInterface
 
             <div class="card" style="background: #261C2C">           
             <div class="card_container">
-              <a class="profile_link" href=""><h4><i class="fas fa-shopping-basket" style="margin-right: 5px"></i><b>ORDER MANAGE</b></h4></a>                  
+              <a class="profile_link" href="order_manage.php"><h4><i class="fas fa-shopping-basket" style="margin-right: 5px"></i><b>ORDER MANAGE</b></h4></a>                  
             </div>            
             </div>
 

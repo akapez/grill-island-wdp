@@ -7,7 +7,7 @@
   display: flex;
   flex-wrap: wrap;
   /* margin: 0 -16px; */
-  padding: 0 10% 10% 10%;
+  padding: 0 5% 10% 5%;
   
 }
 
@@ -45,10 +45,6 @@ table{
   border-collapse: collapse;
 }
 
-.cart_info{
-  display: flex;
-  flex-wrap: wrap;
-}
 
 th{
   text-align: left;
@@ -63,6 +59,22 @@ td .qty_input{
   width: 50px;
   height: 30px;
   padding: 5px;
+}
+
+td .price_input{
+  width: 100px;
+  height: 20px;
+  padding: 5px;
+  background: none;
+  border: none;
+}
+
+.removeBtn{
+  background-color: #da0037;
+  color: #ffff;
+  border: none;
+  padding: 4px 5px 4px 5px;
+  cursor: pointer;
 }
 
 td a{
@@ -106,6 +118,8 @@ span.price {
   color: grey;
 }
 
+
+
 @media (max-width: 1024px) {
  .cart_banner{
   height: calc(20vh - 15px);
@@ -129,3 +143,10 @@ span.price {
   }
 }
 
+
+.cart_input{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}

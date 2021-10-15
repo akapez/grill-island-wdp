@@ -1,5 +1,6 @@
 <?php
-$host = 'localhost';
+// $host = 'localhost';
+$host = '127.0.0.1:3307';
 $db = 'grill_island';
 $user = 'root';
 $pass = '';
@@ -13,6 +14,9 @@ try {
 } catch (PDOException $e) {
     throw new PDOException($e->getMessage());
 }
+
+require_once './controllers/order.php';
+$order = new order($pdo);
 
 require_once './controllers/menuItems.php';
 

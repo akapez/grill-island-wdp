@@ -152,25 +152,25 @@ if (isset($_POST['checkout'])) {
           <i class="fab fa-cc-mastercard" style="color:red;"></i>
         </div>
         <label for="cname">Name on Card</label>
-        <input class="cart_input" type="text" name="cardname" placeholder="John More Doe">
+        <input class="cart_input" type="text" name="cardname" placeholder="John More Doe" required>
         <label for="ccnum">Credit card number</label>
-        <input class="cart_input" type="text" name="cardnumber" placeholder="1111-2222-3333-4444">
+        <input class="cart_input" type="text" name="cardnumber" placeholder="1111-2222-3333-4444" required>
         <label for="expmonth">Exp Month</label>
-        <input class="cart_input" type="text" name="expmonth" placeholder="September">
+        <input class="cart_input" type="text" name="expmonth" placeholder="September" required>
         <label for="expyear">Exp Year</label>
-        <input class="cart_input" type="text" name="expyear" placeholder="2018">
+        <input class="cart_input" type="text" name="expyear" placeholder="2018" required>
         <label for="cvv">CVV</label>
-        <input class="cart_input" type="text" name="cvv" placeholder="352">
+        <input class="cart_input" type="text" name="cvv" placeholder="352" required>
 
         <h3 style="margin-top: 5px">Deliver Address</h3>
         <label for="fname">Full Name</label>
-        <input class="cart_input" type="text" name="fullName" placeholder="John M. Doe">
+        <input class="cart_input" type="text" name="fullName" placeholder="John M. Doe" required>
         <label for="email">Email</label>
         <input class="cart_input" type="text" name="email" value="<?PHP if (isset($_SESSION['email'])) {
                                                                     echo $_SESSION['email'];
-                                                                  } ?>">
+                                                                  } ?>" disabled>
         <label for="adr">Address</label>
-        <textarea class="cart_input" type="text" rows="5" name="address" placeholder="542 W. 15th Street"></textarea>
+        <textarea class="cart_input" type="text" rows="5" name="address" placeholder="542 W. 15th Street" required></textarea>
         <input type="hidden" name="status" value="Pending">
         <input type="hidden" name="fullAmount" id="total" class="total price">
 

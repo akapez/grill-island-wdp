@@ -18,9 +18,12 @@ require_once './controllers/menuItems.php';
 
 require_once './controllers/feedbackpost.php';
 
+require_once './controllers/contact.php';
+
 $menu = new menuItems($pdo);
 
-
 $feedback = new feedback($pdo);
+
+$contact = new contact($pdo);
 
 ?> 

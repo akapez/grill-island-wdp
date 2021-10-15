@@ -7,7 +7,7 @@
   display: flex;
   flex-wrap: wrap;
   /* margin: 0 -16px; */
-  padding: 0 10% 10% 10%;
+  padding: 0 5% 10% 5%;
   
 }
 
@@ -45,10 +45,6 @@ table{
   border-collapse: collapse;
 }
 
-.cart_info{
-  display: flex;
-  flex-wrap: wrap;
-}
 
 th{
   text-align: left;

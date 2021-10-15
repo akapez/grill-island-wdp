@@ -17,8 +17,7 @@ if (!$_SESSION['email']) {
 
     <table id="orders">
       <tr>
-        <th>ID</th>
-        <th>TOTAL (Rs.)</th>
+        <th>ID</th>    
         <th>DATE</th>
         <th>STATUS</th>
       </tr>
@@ -36,8 +35,7 @@ if (!$_SESSION['email']) {
               // print_r($row);
         ?>
           <tr>
-              <td><?php echo $row['id']; ?></td>
-              <td><?php echo $row['fullAmount']; ?></td>
+              <td><?php echo $row['orderId']; ?></td>           
               <td><?php echo $row['orderDate']; ?></td>
               <td><?php echo $row['status']; ?></td>
           </tr>

@@ -49,7 +49,7 @@ if (!$_SESSION['username']) {
     ?>
 
         <form method="POST" action="change_status.php" autocomplete="off">
-            <input type="hidden" name="id" value="<?php echo $orderResult['id'] ?>" />
+            <input type="hidden" name="id" value="<?php echo $orderResult['orderId'] ?>" />
             <div class="order-manage-container">       
            
                 <label for="size"><b>CHANGE STATUS</b></label><br />

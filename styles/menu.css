@@ -89,3 +89,25 @@
   display: inline-block;
   cursor: pointer;
 }
+
+.back-btn {
+  margin-top: 10%;
+  background-color: #ebde26;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif; 
+  outline: none;
+  color: white;
+  padding: 8px 18px 8px 18px;
+  text-align: center;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.warning{
+  background-color: #ffffcc;
+  border-left: 6px solid #ffeb3b;
+  padding: 10px 12px;
+}

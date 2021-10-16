@@ -23,8 +23,7 @@ class menuItems
 
             $statement->execute();
             return true;
-        } catch (PDOException $e) {
-            // echo $e->getMessage();
+        } catch (PDOException $e) {         
             $e->getMessage();
             return false;
         }
@@ -36,8 +35,7 @@ class menuItems
             $sql = "SELECT * FROM menus";
             $result = $this->db->query($sql);
             return $result;
-        } catch (PDOException $e) {
-            // echo $e->getMessage();
+        } catch (PDOException $e) {            
             $e->getMessage();
             return false;
         }
@@ -52,8 +50,7 @@ class menuItems
             $result = $statement->execute();
             $result = $statement->fetch();
             return $result;
-        } catch (PDOException $e) {
-            // echo $e->getMessage();
+        } catch (PDOException $e) {           
             $e->getMessage();
             return false;
         }
@@ -73,8 +70,7 @@ class menuItems
       
             $statement->execute();
             return true;
-        } catch (PDOException $e) {
-            //  echo $e->getMessage();
+        } catch (PDOException $e) {          
             $e->getMessage();
             return false;
         }
@@ -87,8 +83,7 @@ class menuItems
              $statement->bindparam(':id', $id);
              $statement->execute();
              return true;
-         }catch (PDOException $e) {
-            //  echo $e->getMessage();
+         }catch (PDOException $e) {           
             $e->getMessage();
              return false;
          }

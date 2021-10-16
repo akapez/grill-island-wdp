@@ -14,8 +14,7 @@ class Database
     public function connect()
     {
         $this->dsn = "mysql:host=" . $this->host . ";dbname=" . $this->dbname;
-        // echo "connect";
-
+       
         try {
             $this->dbh = new PDO($this->dsn, $this->user, $this->password);
         } catch (PDOException $e) {
@@ -24,10 +23,7 @@ class Database
         }
         return $this->dbh;
     }
-}
-
-//    $db = new Database();
-//    $db->connect();   
+} 
 
 ?>
 

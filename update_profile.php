@@ -52,8 +52,7 @@ if(!$_SESSION['email']) {
 
         if($fetch_result){
             if(mysqli_num_rows($fetch_result)>0){
-                while($row = mysqli_fetch_array($fetch_result)){
-                    // print_r($row);
+                while($row = mysqli_fetch_array($fetch_result)){                    
                 ?>
             <div class="profile-container">
                 <h3>PROFILE</h3>

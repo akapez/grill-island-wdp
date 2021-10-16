@@ -9,9 +9,7 @@ if(isset($_POST['register'])){
     $password = htmlspecialchars($_POST['password']);
     $confirmPassword = htmlspecialchars($_POST['confirmPassword']);
 
-    // echo $name . $email . $password . $confirmPassword;
-
-    // DECLARING EMPTY ARRAY OF ERRORS
+      // DECLARING EMPTY ARRAY OF ERRORS
     $message = array();
 
     if (empty($name) && empty($email) && empty($password) && empty($confirmPassword)) {
@@ -30,8 +28,7 @@ if(isset($_POST['register'])){
         $message[] = "Email is not valid";
         header("Location: " . $host . "/index.php?action=register&message=" . $message[0]);   
         exit();
-    }else{
-        // echo "user validation success"; 
+    }else{  
         $database = new Database();
         $dbh = $database->connect();
         $dbh->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);

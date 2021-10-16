@@ -14,8 +14,7 @@ class order
             $sql = "SELECT * FROM orders";
             $result = $this->db->query($sql);
             return $result;
-        } catch (PDOException $e) {
-            // echo $e->getMessage();
+        } catch (PDOException $e) {        
             $e->getMessage();
             return false;
         }
@@ -30,8 +29,7 @@ class order
             $result = $statement->execute();
             $result = $statement->fetch();
             return $result;
-        } catch (PDOException $e) {
-            // echo $e->getMessage();
+        } catch (PDOException $e) {   
             $e->getMessage();
             return false;
         }
@@ -47,8 +45,7 @@ class order
 
             $statement->execute();
             return true;
-        } catch (PDOException $e) {
-            //  echo $e->getMessage();
+        } catch (PDOException $e) {       
             $e->getMessage();
             return false;
         }

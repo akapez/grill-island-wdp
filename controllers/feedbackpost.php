@@ -26,8 +26,7 @@ class feedback
 
             $statement->execute();
             return true;
-        } catch (PDOException $e) {
-            // echo $e->getMessage();
+        } catch (PDOException $e) {       
             $e->getMessage();
             return false;
         }
@@ -39,8 +38,7 @@ class feedback
             $sql = "SELECT * FROM feedback";
             $result = $this->db->query($sql);
             return $result;
-        } catch (PDOException $e) {
-            // echo $e->getMessage();
+        } catch (PDOException $e) {            
             $e->getMessage();
             return false;
         }

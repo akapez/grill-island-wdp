@@ -24,8 +24,7 @@ class contact
 
             $statement->execute();
             return true;
-        } catch (PDOException $e) {
-            // echo $e->getMessage();
+        } catch (PDOException $e) {        
             $e->getMessage();
             return false;
         }
@@ -37,8 +36,7 @@ class contact
             $sql = "SELECT * FROM contacts";
             $result = $this->db->query($sql);
             return $result;
-        } catch (PDOException $e) {
-            // echo $e->getMessage();
+        } catch (PDOException $e) {       
             $e->getMessage();
             return false;
         }

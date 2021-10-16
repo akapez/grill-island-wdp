@@ -28,8 +28,7 @@
   <link rel="stylesheet" href="./styles/userscreen.css" />
   <!--admin screen css-->
   <link rel="stylesheet" href="./styles/adminscreen.css" />
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ 
   <!-- CDN-font-awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 </head>
@@ -62,7 +61,7 @@
           }
 
           ?>
-          <!-- <span id="cart-count" class="badge">1</span></a> -->
+     
       </li>
       <li><a href="feedback.php">FEEDBACK</a></li>
       <li><a href="about.php">ABOUT</a></li>

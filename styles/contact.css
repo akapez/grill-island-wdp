@@ -160,7 +160,7 @@
   letter-spacing: 1px;
 }
 
-.contact-container .contactForm .msgBox .inputBox input[type="submit"]{
+.contact-btn{
   padding: 1rem 3rem;
   border: none;
   background: #da0037;
@@ -171,6 +171,7 @@
   transition: 0.3s ease;
   text-decoration: none;
   border-radius: 4px;
+  width:100%
 }
 
 @media screen and (max-width : 1200px){

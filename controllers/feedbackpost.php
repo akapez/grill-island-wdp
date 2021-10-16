@@ -32,4 +32,20 @@ class feedback
             return false;
         }
     }
+
+    public function getFeedbackData()
+    {
+        try {
+            $sql = "SELECT * FROM feedback";
+            $result = $this->db->query($sql);
+            return $result;
+        } catch (PDOException $e) {
+            // echo $e->getMessage();
+            $e->getMessage();
+            return false;
+        }
+    }
+
+
+
 }

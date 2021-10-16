@@ -1,6 +1,6 @@
 <?php
-// $host = 'localhost';
-$host = '127.0.0.1:3307';
+$host = 'localhost';
+//$host = '127.0.0.1:3307';
 $db = 'grill_island';
 $user = 'root';
 $pass = '';

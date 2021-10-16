@@ -30,4 +30,17 @@ class contact
             return false;
         }
     }
+
+    public function getContactData()
+    {
+        try {
+            $sql = "SELECT * FROM contacts";
+            $result = $this->db->query($sql);
+            return $result;
+        } catch (PDOException $e) {
+            // echo $e->getMessage();
+            $e->getMessage();
+            return false;
+        }
+    }
 }

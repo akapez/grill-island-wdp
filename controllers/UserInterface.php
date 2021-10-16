@@ -140,13 +140,13 @@ class UserInterface
 
             <div class="card" style="background: #261C2C">           
             <div class="card_container">
-              <a class="profile_link" href=""><h4><i class="far fa-comments" style="margin-right: 5px"></i><b>VIEW CUSTOMER FEEDBACKS</b></h4></a>                  
+              <a class="profile_link" href="view_feedback.php"><h4><i class="far fa-comments" style="margin-right: 5px"></i><b>VIEW CUSTOMER FEEDBACKS</b></h4></a>                  
             </div>            
             </div>
 
             <div class="card" style="background: #261C2C">           
             <div class="card_container">
-              <a class="profile_link" href=""><h4><i class="far fa-address-book" style="margin-right: 5px"></i><b>VIEW CONTACTS</b></h4></a>                  
+              <a class="profile_link" href="view_contacts.php"><h4><i class="far fa-address-book" style="margin-right: 5px"></i><b>VIEW CONTACTS</b></h4></a>                  
             </div>            
             </div>
             

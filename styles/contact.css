@@ -1,0 +1,251 @@
+/* Contact Section */
+
+.contacts{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contact-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.1)), url(../assets/contact-cover.jpg);
+  background-size: cover;
+}
+
+.contact-section::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.contact-container{
+  position: relative;
+  min-width: 1100px;
+  min-height: 550px;
+  display: flex;
+  z-index: 1000;
+}
+
+.contact-container .contactInfo{
+  position: absolute;
+  top: 40px;
+  width: 350px;
+  height: calc(100% - 80px);
+  background: transparent;
+  z-index: 1;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 25px rgba(31, 31, 31, 0.15);
+}
+
+
+.contact-container .contactInfo h2{
+  color: #da0037;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.contact-container .contactInfo ul.info{
+  color: white;
+  position: relative;
+  margin: 20px 0;
+}
+
+.contact-container .contactInfo ul.info li{
+  position: relative;
+  list-style: none;
+  display: flex;
+  margin: 20px 0;
+  cursor: pointer;
+  align-items: flex-start;
+}
+
+.contact-container .contactInfo ul.info li span:nth-child(1){
+  width: 30px;
+  min-width: 30px;
+}
+
+.contact-container .contactInfo ul.info li span:nth-child(1) i{
+  max-width: 100%;
+}
+
+.contact-container .contactInfo ul.info li span:nth-child(2){
+  margin-left: 10px;
+  font-weight: 300;
+}
+
+.contact-container .contactForm{
+  position: absolute;
+  padding: 70px 50px;
+  padding-left: 250px;
+  margin-left: 150px;
+  width: calc(100% - 150px);
+  height: 100%;
+  background: transparent;
+  box-shadow: 0 50px 50px rgba(41, 40, 40, 0.25);
+}
+
+.contact-container .contactForm h2{
+  font-size: 24px;
+  font-weight: 500;
+  color: #da0037;
+}
+
+.contact-container .contactForm .msgBox{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.contact-container .contactForm .msgBox .inputBox{
+  position: relative;
+  margin-bottom: 35px;
+  color: white;
+}
+
+.contact-container .contactForm .msgBox .inputBox.w50{
+  width: 47%;
+}
+
+.contact-container .contactForm .msgBox .inputBox.w100{
+  width: 100%;
+}
+
+.contact-container .contactForm .msgBox .inputBox input,
+.contact-container .contactForm .msgBox .inputBox textarea{
+  width: 100%;
+  resize: none;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 300;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid;
+  background-color: transparent;
+  color: white;
+}
+
+.contact-container .contactForm .msgBox .inputBox textarea{
+  height: 120px;
+}
+
+.contact-container .contactForm .msgBox .inputBox span{
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  pointer-events: none;
+  font-size: 18px;
+  font-weight: 300;
+  transition: 0.3s;
+}
+
+.contact-container .contactForm .msgBox .inputBox input:focus ~ span,
+.contact-container .contactForm .msgBox .inputBox input:valid ~ span,
+.contact-container .contactForm .msgBox .inputBox textarea:focus ~ span,
+.contact-container .contactForm .msgBox .inputBox textarea:valid ~ span{
+  transform: translateY(-20px);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.contact-btn{
+  padding: 1rem 3rem;
+  border: none;
+  background: #da0037;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s ease;
+  text-decoration: none;
+  border-radius: 4px;
+  width:100%
+}
+
+@media screen and (max-width : 1200px){
+  .contact-container{
+      width: 90%;
+      min-width: auto;
+      margin: 20px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  }
+
+  .contact-container .contactInfo{
+      top: 0;
+      height: 550px;
+      position: relative;
+      box-shadow: none;
+  }
+
+  .contact-container .contactForm{
+      position: relative;
+      width: calc(100% - 350px);
+      padding-left: 0;
+      margin-left: 0;
+      padding: 40px;
+      height: 550px;
+      box-shadow: none;
+  }
+}
+
+@media screen and (max-width : 991px) {
+  .contact-section::before{
+      display: none;
+  }
+
+  .contact-container{
+      display: flex;
+      flex-direction: column-reverse;
+  }
+
+  .contact-container .contactForm{
+      width: 100%;
+      height: auto;
+
+  }
+
+  .contact-container .contactInfo{
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .contact-container .contactInfo ul.social{
+      position: relative;
+      display: flex;
+  }
+}
+
+@media screen and (max-width : 600px) {
+  .contact-container .contactForm{
+      padding: 25px;
+  }
+
+  .contact-container .contactForm{
+      padding: 25px;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .contact-container .contactInfo ul.social{
+      margin-top: 40px;
+  }
+
+  .contact-container .contactForm .msgBox .inputBox.w50{
+      width: 100%;
+  }
+}
+
